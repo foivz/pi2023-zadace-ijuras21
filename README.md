@@ -9,6 +9,7 @@ A sada, vrijeme je za prvi korak rada na vašem projektu. 🙂 Za upis/opis vaš
 
 # Naziv projekta
 Kadrovska
+
 (U redak iznad navedite naziv projekta koji ste dobili za analizu!)
 
 ## Podaci o studentu

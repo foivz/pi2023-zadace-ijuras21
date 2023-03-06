@@ -21,9 +21,23 @@ Ime i prezime | ijuras21@foi.hr | 0016156344 | ijuras21
 
 
 ## Opis domene
+Potrebno je napraviti softver koji djelatnicima IT poduzeća omogućuje slanje zahtjeva za
+godišnjim odmorima, slobodnim danima, službenim putovanjima i stručnim usavršavanjem.
+Osim toga, softver bi trebao omogućiti praćenje odsustva djelatnika u vidu bolovanja.
+
 (Vlastitim riječima opišite domenu ili problem koji pokriva projekt vaše zadaće!)
 
 ## Specifikacija projekta
+Specifikacija zahtjeva treba sadržavati minimalno:
+• 8 funkcionalnih zahtjeva, od toga minimalno:
+o 1 zahtjev u domeni prikaza dohvaćenih podataka
+o 1 zahtjev u domeni unosa podataka
+o 1 zahtjev u domeni izrade izvještaja
+o 1 zahtjev u domeni prikaza statističkih podataka
+• 2 nefunkcionalna zahtjeva, od toga minimalno:
+o 1 zahtjev u domeni izgleda softvera
+o 1 zahtjev u bilo kojoj drugoj domeni
+
 (Vlastitim riječima opišite zahtjeve za izradu ovog programskog proizvoda!)
 
 ## Zadatak

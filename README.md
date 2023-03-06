@@ -17,7 +17,7 @@ Softver Kadrovska služba u IT poduzeću
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | ijuras21@foi.hr | 000000000 | githubuser
+Ime i prezime | ijuras21@foi.hr | 0016156344 | ijuras21
 
 
 ## Opis domene

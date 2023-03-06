@@ -42,6 +42,7 @@ o 1 zahtjev u bilo kojoj drugoj domeni
 
 ## Zadatak
 [Link na zadatak](https://github.com/foivz/pi2023-zadace-ijuras21/blob/master/Zadatak%20-%20Kadrovska.pdf)
+
 (U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
 
 ## Resursi

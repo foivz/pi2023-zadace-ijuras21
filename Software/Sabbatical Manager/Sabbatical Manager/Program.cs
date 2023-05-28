@@ -15,7 +15,7 @@ namespace Sabbatical_Manager {
             DB.SetConfiguration("IPS23_ijuras21", "ijuras21", "6EK4t*yU");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmEmployer());
         }
     }
 }

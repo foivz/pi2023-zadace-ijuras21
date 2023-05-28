@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sabbatical_Manager.Models;
+using Sabbatical_Manager.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace Sabbatical_Manager {
     public partial class FrmLogin : Form {
 
-        string username = "nastavnik";
-        string password = "test";
+        public static Djelatnik LogiraniDjelatnik { get; set; } // username: djelatnik pass:test
 
         public FrmLogin() {
             InitializeComponent();
@@ -27,7 +28,8 @@ namespace Sabbatical_Manager {
                 MessageBox.Show("Lozinka nije unesena!", "Problem", MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
             } else {
-                if (txtUsername.Text == username && txtPassword.Text == password) {
+                LogiraniDjelatnik = RepozitorijDjelatnika.DohvatiDjelatnika(txtUsername.Text);
+                if (LogiraniDjelatnik != null && LogiraniDjelatnik.Password == txtPassword.Text) {
                     FrmEmployer frmEmployer = new FrmEmployer();
                     Hide();
                     frmEmployer.ShowDialog();

@@ -9,6 +9,40 @@ using System.Threading.Tasks;
 
 namespace Sabbatical_Manager.Repositories {
     public class RepozitorijDjelatnika {
+        public static Djelatnik DohvatiDjelatnika(string username) {
+            string sql = $"SELECT * FROM Djelatnik WHERE Username ='{username}'";
+            return DohvatiDjelatnik(sql);
+        }
+        public static Djelatnik DohvatiDjelatnika(int id) {
+            string sql = $"SELECT * FROM Djelatnik WHERE Id = {id}";
+            return DohvatiDjelatnik(sql);
+        }
+
+        private static Djelatnik DohvatiDjelatnik(string sql) {
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            Djelatnik djelatnik = null;
+            if (reader.HasRows == true) {
+                reader.Read();
+                djelatnik = KreirajObjekt(reader);
+                reader.Close();
+            }
+            DB.CloseConnection();
+            return djelatnik;
+        }
+
+        private static Djelatnik KreirajObjekt(SqlDataReader reader) {
+            int id = int.Parse(reader["Id"].ToString());
+            string username = reader["Username"].ToString();
+            string password = reader["Password"].ToString();
+            var djelatnik = new Djelatnik {
+                Id = id,
+                Username = username,
+                Password = password
+            };
+            return djelatnik;
+        }
+
         public static Zahtjev DohvatiZahtjev(int id) {
             Zahtjev zahtjev = null;
             string sql = $"SELECT * FROM Zahtjev WHERE Id = {id}";

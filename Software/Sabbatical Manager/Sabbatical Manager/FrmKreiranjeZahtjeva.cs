@@ -55,6 +55,12 @@ namespace Sabbatical_Manager {
         }
 
         private void button1_Click(object sender, EventArgs e) {
+            if(cboVrsta.Text == "") {
+                MessageBox.Show("Vrsta nije odabrana!", "Problem",
+                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            } else { 
+
             Zahtjev zahtjev = new Zahtjev {
                 Obrazloženje = txtObrazlozenje.Text,
                 Vrsta = cboVrsta.Text,
@@ -75,6 +81,7 @@ namespace Sabbatical_Manager {
             Hide();
             frmEmployer.ShowDialog();
             Close();
+            }
         }
     }
 }

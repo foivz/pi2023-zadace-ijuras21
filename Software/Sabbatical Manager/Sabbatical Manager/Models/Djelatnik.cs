@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sabbatical_Manager.Models {
     public class Djelatnik : Osoba {
-        public string KorisnickoIme { get; set; }
-        public string Lozinka { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

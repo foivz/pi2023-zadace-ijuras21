@@ -23,6 +23,20 @@ namespace Sabbatical_Manager.Repositories {
             return zahtjev;
         }
 
+        public static List<Zahtjev> DohvatiZahtjevString(string vrsta) {
+            List<Zahtjev> zahtjevi = new List<Zahtjev>();
+            string sql = $"SELECT * FROM Zahtjev WHERE Vrsta LIKE '%{vrsta}%'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read()) {
+                Zahtjev zahtjev = CreateObject(reader);
+                zahtjevi.Add(zahtjev);
+            }
+            reader.Close();
+            DB.CloseConnection();
+            return zahtjevi;
+        }
+
 
 
         public static List<Zahtjev> DohvatiZahtjeve() {
@@ -66,11 +80,9 @@ namespace Sabbatical_Manager.Repositories {
             DB.CloseConnection();
         }
 
-        public static void UrediZahtjev(Zahtjev zahtjev) {
+        public static void UrediZahtjev(Zahtjev zahtjev, int id) {
             
-            string sql = $"UPDATE Zahtjev SET Vrsta= '{zahtjev.Vrsta}', DatumOdlaska= '{zahtjev.DatumOdlaska}', DoDatuma= '{zahtjev.DoDatuma}', Obrazloženje= '{zahtjev.Obrazloženje}', Status= '{zahtjev.Status}' WHERE Id= {zahtjev.Id}";
-
-            Console.Write(zahtjev.Vrsta);
+            string sql = $"UPDATE Zahtjev SET Vrsta= '{zahtjev.Vrsta}', DatumOdlaska= '{zahtjev.DatumOdlaska}', DoDatuma= '{zahtjev.DoDatuma}', Obrazloženje= '{zahtjev.Obrazloženje}', Status= '{zahtjev.Status}' WHERE Id= {id}";
 
             DB.OpenConnection();
             DB.ExecuteCommand(sql);

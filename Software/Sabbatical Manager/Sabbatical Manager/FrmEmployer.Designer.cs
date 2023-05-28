@@ -28,6 +28,8 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btnUredi = new System.Windows.Forms.Button();
             this.btnObriši = new System.Windows.Forms.Button();
+            this.txtPretraži = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjev)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -81,11 +83,30 @@
             this.btnObriši.UseVisualStyleBackColor = true;
             this.btnObriši.Click += new System.EventHandler(this.btnObriši_Click);
             // 
+            // txtPretraži
+            // 
+            this.txtPretraži.Location = new System.Drawing.Point(124, 83);
+            this.txtPretraži.Name = "txtPretraži";
+            this.txtPretraži.Size = new System.Drawing.Size(355, 20);
+            this.txtPretraži.TabIndex = 5;
+            this.txtPretraži.TextChanged += new System.EventHandler(this.txtPretraži_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(47, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Pretraživanje:";
+            // 
             // FrmEmployer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPretraži);
             this.Controls.Add(this.btnObriši);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.dataGridView2);
@@ -97,6 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjev)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -107,5 +129,7 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button btnUredi;
         private System.Windows.Forms.Button btnObriši;
+        private System.Windows.Forms.TextBox txtPretraži;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Sabbatical_Manager.Models;
+﻿using DBLayer;
+using Sabbatical_Manager.Models;
 using Sabbatical_Manager.Repositories;
 using System;
 using System.Collections.Generic;
@@ -30,8 +31,10 @@ namespace Sabbatical_Manager {
         }
 
         bool edit = false;
+        int editID;
         public void Editing(int id) {
             edit = true;
+            editID = id;
 
             Zahtjev zahtjev = RepozitorijDjelatnika.DohvatiZahtjev(id);
 
@@ -63,7 +66,7 @@ namespace Sabbatical_Manager {
             if (!edit) {
                 RepozitorijDjelatnika.SpremiZahtjev(zahtjev);
             } else {
-                RepozitorijDjelatnika.UrediZahtjev(zahtjev);
+                RepozitorijDjelatnika.UrediZahtjev(zahtjev, editID);
             }
 
             edit = false;

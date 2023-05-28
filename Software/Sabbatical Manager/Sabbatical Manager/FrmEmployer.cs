@@ -67,5 +67,12 @@ namespace Sabbatical_Manager {
             frmEmployer.ShowDialog();
             Close();
         }
+
+        private void txtPretraži_TextChanged(object sender, EventArgs e) {
+
+            List<Zahtjev> zahtjevi = RepozitorijDjelatnika.DohvatiZahtjevString(txtPretraži.Text);
+            dgvZahtjev.DataSource = zahtjevi;
+
+        }
     }
 }

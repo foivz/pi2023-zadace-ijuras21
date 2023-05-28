@@ -79,6 +79,7 @@
             this.btnObriši.TabIndex = 4;
             this.btnObriši.Text = "Obriši";
             this.btnObriši.UseVisualStyleBackColor = true;
+            this.btnObriši.Click += new System.EventHandler(this.btnObriši_Click);
             // 
             // FrmEmployer
             // 

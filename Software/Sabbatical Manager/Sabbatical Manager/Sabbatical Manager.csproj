@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{93239A7B-C8D7-47A3-9FF6-16AFBD8325A2}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Sabbatical_Manager</RootNamespace>
     <AssemblyName>Sabbatical Manager</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>

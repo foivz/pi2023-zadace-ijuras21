@@ -1,4 +1,5 @@
-﻿using Sabbatical_Manager.Models;
+﻿using DBLayer;
+using Sabbatical_Manager.Models;
 using Sabbatical_Manager.Repositories;
 using System;
 using System.Collections.Generic;
@@ -50,6 +51,21 @@ namespace Sabbatical_Manager {
             Close();
 
 
+        }
+
+        private void btnObriši_Click(object sender, EventArgs e) {
+
+            int id = (int)dgvZahtjev.SelectedCells[0].OwningRow.Cells["Id"].Value;
+
+            string sql = $"DELETE FROM Zahtjev WHERE Id = {id}";
+
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+            FrmEmployer frmEmployer = new FrmEmployer();
+            Hide();
+            frmEmployer.ShowDialog();
+            Close();
         }
     }
 }

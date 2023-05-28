@@ -68,8 +68,10 @@ namespace Sabbatical_Manager.Repositories {
 
         public static void UrediZahtjev(Zahtjev zahtjev) {
             
+            string sql = $"UPDATE Zahtjev SET Vrsta= '{zahtjev.Vrsta}', DatumOdlaska= '{zahtjev.DatumOdlaska}', DoDatuma= '{zahtjev.DoDatuma}', Obrazloženje= '{zahtjev.Obrazloženje}', Status= '{zahtjev.Status}' WHERE Id= {zahtjev.Id}";
 
-            string sql = $"UPDATE Zahtjev SET Vrsta = '{zahtjev.Vrsta}', DatumOdlaska = '{zahtjev.DatumOdlaska}', DoDatuma = '{zahtjev.DoDatuma}', Obrazloženje = '{zahtjev.Obrazloženje}', Status = '{zahtjev.Status}' WHERE Id = {zahtjev.Id}";
+            Console.Write(zahtjev.Vrsta);
+
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();

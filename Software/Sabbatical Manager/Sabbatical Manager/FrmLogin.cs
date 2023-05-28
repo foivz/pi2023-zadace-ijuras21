@@ -38,7 +38,7 @@ namespace Sabbatical_Manager {
                     MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 }
-
+                
             }
         }
     }

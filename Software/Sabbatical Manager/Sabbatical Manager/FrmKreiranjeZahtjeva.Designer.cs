@@ -30,7 +30,7 @@
             this.cboVrsta = new System.Windows.Forms.ComboBox();
             this.txtObrazlozenje = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnOdustani = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -95,18 +95,19 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 32);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Kreiraj novi zahtjev";
+            this.button1.Text = "Spremi";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnOdustani
             // 
-            this.button2.Location = new System.Drawing.Point(461, 455);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 36);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Odustani";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnOdustani.Location = new System.Drawing.Point(461, 455);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(143, 36);
+            this.btnOdustani.TabIndex = 8;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // label1
             // 
@@ -175,7 +176,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtObrazlozenje);
             this.Controls.Add(this.cboVrsta);
@@ -203,7 +204,7 @@
         private System.Windows.Forms.ComboBox cboVrsta;
         private System.Windows.Forms.RichTextBox txtObrazlozenje;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

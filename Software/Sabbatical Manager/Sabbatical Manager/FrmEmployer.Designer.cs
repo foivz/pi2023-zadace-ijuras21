@@ -112,7 +112,10 @@
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dgvZahtjev);
             this.Controls.Add(this.btnRequest);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmEmployer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Početna stranica - Djelatnik";
             this.Load += new System.EventHandler(this.FrmEmployer_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjev)).EndInit();

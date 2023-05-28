@@ -83,5 +83,12 @@ namespace Sabbatical_Manager {
             Close();
             }
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e) {
+            FrmEmployer frmEmployer = new FrmEmployer();
+            Hide();
+            frmEmployer.ShowDialog();
+            Close();
+        }
     }
 }

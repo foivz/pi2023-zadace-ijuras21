@@ -18,7 +18,7 @@ namespace Sabbatical_Manager {
         public FrmLogin() {
             InitializeComponent();
         }
-
+ 
         private void btnLogin_Click(object sender, EventArgs e) {
             if (txtUsername.Text == "") {
                 MessageBox.Show("Korisničko ime nije uneseno!", "Problem",
@@ -28,8 +28,10 @@ namespace Sabbatical_Manager {
                 MessageBoxIcon.Error);
             } else {
                 if (txtUsername.Text == username && txtPassword.Text == password) {
-                    MessageBox.Show("Dobrodošli!", "Prijavljeni ste",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmEmployer frmEmployer = new FrmEmployer();
+                    Hide();
+                    frmEmployer.ShowDialog();
+                    Close();
                 } else {
                     MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);

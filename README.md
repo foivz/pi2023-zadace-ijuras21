@@ -8,7 +8,7 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 Ime i prezime | ijuras21@foi.hr | 0016156344 | ijuras21
 
 ## Za prijaviti se u aplikaciju napravljenu u Visual Studiu
-Korisničko ime: djelatnik
+Korisničko ime: djelatnik <br>
 Lozinka: test
 
 ## Opis domene
